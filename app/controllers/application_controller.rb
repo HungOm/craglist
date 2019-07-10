@@ -17,7 +17,23 @@ class ApplicationController < Sinatra::Base
   # Renders the home or index page
   get '/' do
 
-    erb :home, layout: :my_layout
+    # hard code
+    @catg = []
+    id=[]
+    categories = Category.all
+    categories.each do |category|
+      @catg<<category.category_title
+      id<<category.id
+      # puts "#{category.id}==="
+
+    end
+    @catg_id = id.uniq
+    @post1 = Post.where(category_id:@catg_id[0])
+    @post2 = Post.where(category_id:@catg_id[1])
+    @post3 = Post.where(category_id:@catg_id[2])
+    @post4 = Post.where(category_id:@catg_id[3])
+    @post5 = Post.where(category_id:@catg_id[4])
+    erb :home#layout: :my_layout
 
   end
 
@@ -50,9 +66,10 @@ class ApplicationController < Sinatra::Base
 
   # Handles the POST request when user submites the Log In form. Similar to above, but without the new user creation.
   post '/sessions' do
-    user = User.find_by(email: params["email"])
-    if user.password == params["password"]
-      session[:user_id] = user.id
+    @posts = Post.all
+    @user = User.find_by(email:params["email"])
+    if @user.password == params["password"]
+      session[:user_id] = @user.id
       redirect '/users/home'
     else
       redirect '/sessions/login'

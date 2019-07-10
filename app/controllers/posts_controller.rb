@@ -48,11 +48,9 @@ class PostsController < Sinatra::Base
     end
 
     put '/edit' do
-
         category_id = params[:category]
         ads = Post.update(title:params[:title],body: params[:body],user_id: session[:user_id],category_id: category_id)
         redirect '/users/home'
-
     end
     
     

@@ -1,0 +1,125 @@
+/* * {
+    box-sizing: border-box;
+  } */
+  .container {
+    font-size: 40px;
+    /* min-height: 300px; */
+    width: 100%;
+    height: 100%;
+    /* background: purple; */
+    display: grid;
+    /* grid-template-columns: 20% 60% ; */
+    grid-gap: 3px;
+    justify-content: center;
+    grid-template-columns: 1fr 4fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+
+}
+
+
+.container-1 {
+    font-size: 40px;
+    /* min-height: 300px; */
+    width: 100%;
+    height: 100%;
+    background: rgb(182, 39, 39);
+    display: grid;
+    grid-area:1/1/4/2;
+}
+
+.container-2 {
+    font-size: 40px;
+    /* min-height: 300px; */
+    width: 100%;
+    height: 100%;
+    /* background: rgb(43, 73, 4); */
+    display: grid;
+    /* justify-content: center; */
+    grid-area:1/2/4/3;
+    /* grid-template-areas: 
+    "header header header"
+    "advert content content"
+    "footer footer footer"; */
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1r 1fr;
+}
+
+
+.container-3 {
+    font-size: 20px;
+    /* min-height: 300px; */
+    width: 100%;
+    height: 100vh;
+    background: rgb(94, 110, 248);
+    display: grid;
+    grid-area:1/3/4/4;
+    justify-content: center;
+
+}
+
+.body{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1r;
+    grid-area:2/1/5/4;
+    font-size: 10px;
+    height: 100%;
+
+    /* grid-area:content; */
+
+}
+
+.item-1{
+    background:rgb(208, 223, 233);
+    grid-area: 1/1/2/4;
+    /* height: 20%; */
+}
+.item-2{
+    /* background:LightSalmon; */
+    grid-area:1/1/4/2;
+}
+.item-3{
+    /* background:PaleTurquoise; */
+}
+.item-4{
+    /* background:LightPink; */
+    grid-area:1/3/5/4;
+}
+
+.item-5 {
+    /* background: PaleGreen; */
+    /* grid-area:2/2/4; */
+  }
+.item-6{
+    /* background:green; */
+}
+.item-7{
+    /* background:yellowgreen; */
+    grid-area:3/2/6/3;
+    height: 100%;
+}
+.item-8{
+    background:rgb(208, 223, 233);
+    grid-area: 9/1/10/4;
+
+}
+
+  .table-card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    /* padding: 16px; */
+    text-align: center;
+    /* background-color: #f1f1f1; */
+  }
+  .table-header{
+      background-color: silver;
+      padding: 6px 0px 6px 0px;
+      text-align: center;
+  }
+
+  .card{
+      text-align: left;
+    
+  }
+  .card p{
+    padding-left:5px
+  }
