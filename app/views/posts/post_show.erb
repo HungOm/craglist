@@ -1,0 +1,29 @@
+
+<link rel="stylesheet" type="text/css" href="/css/post/my_post.css">
+<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+
+
+
+
+<%# <%= @posts.each do |post|%>
+
+    <div id="Border">
+
+    <div id="one">
+
+        <%# <h4><%=@post.created_at%> <%#</h4>    %>
+        <h4><%=@from_time%></h4>
+        <h4><%=@hour%> hours ago</h4>
+        <h1><%=@post.title%></h1>
+        <p class="firstPara">
+            Bacon ipsum dolor amet corned beef meatloaf short loin pork loin short ribs</p>
+        <p><%=@post.body%></p>
+        <%if !@edit.nil?%>
+            <a href="/edit_post/<%=@edit%>"><h4>Edit</h4>
+        <%end%>
+       
+    </div>
+
+    </div>
+
+

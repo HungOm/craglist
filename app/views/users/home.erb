@@ -1,0 +1,47 @@
+Welcome, <%=@user.name%>!
+
+<%# 
+<%=@posts.each do |post|%>
+    <%# <div class="card mb-3">
+    <img src="..." class="card-img-top" alt="...">
+    <div class="card-body">
+        <%# <h5 class="card-title"><%=post.title%><%#/h5> %>
+        <%# <p class="card-text"><%=post.body</p> %>
+        <%# <p class="card-text"><small class="text-muted">Last updated <%=post.get_post_time%>
+    <%# </div> %>
+    <%# </div> %> 
+    <%# <h5><%=post.title%><%#</h5> %>
+    
+
+<%# <%=end%> 
+<% @posts.each do |post| %>
+  <div class="row d-flex inline-block">
+  <%# <a href="post/post_show/"> %>
+  <div class="card mb-3 ml-4">
+  <img src="..." class="card-img-top ml-2" alt="...">
+  <div class="card-body">
+  <h5 class="card-title"><%=post.title%></h5>
+    <%# <p class="card-text"><%=post.body </p> %>
+    <h5>by <%=User.find_by(id:post.user_id).name%>
+    <h5><span class="badge badge-danger">Category:</span><span class="badge badge-success"><%=Category.find_by(id:post.category_id).category_title%></span></h5>
+    <%# <h5>by <%=User.post.user_id%>
+
+    <p class="card-text"><small class="text-muted">Last updated <%=Post.get_post_time(post.created_at)%> hours ago</small></p>
+    </div>
+    <a href="/posts/<%=post.id%>">Read this post</a>
+    <%# <%=link_to "/posts/show_post",:post_id=> post.id>Read this post</a> %>
+
+    </div>
+    
+    <%# </a> %>
+  </div>
+<% end %>
+
+
+
+<a href="/posts/create_ads">Create ads</a>
+
+<a href="/sessions/logout">Log Out</a>
+
+
+
