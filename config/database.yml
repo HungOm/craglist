@@ -1,17 +1,19 @@
 development:
-  adapter: sqlite3
-  database: db/user_authdevelopment.sqlite
+  adapter: postgresql
+  database: development
   pool: 5
   timeout: 5000
 
 test:
-  adapter: sqlite3
-  database: db/user_authtest.sqlite
+  adapter: postgresql
+  database: craiglist_test
   pool: 5
   timeout: 5000
 
 production:
-  adapter: sqlite3
-  database: db/user_authproduction.sqlite
+  adapter: postgresql
+  database: craiglist_production
   pool: 5
   timeout: 5000
+  url: <%= ENV['DATABASE_URL']%>
+  
