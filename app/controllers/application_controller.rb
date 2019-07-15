@@ -59,9 +59,7 @@ class ApplicationController < Sinatra::Base
   
   # Renders the view page in app/views/sessions/login.erb
   get '/sessions/login' do
-
     erb :'/sessions/login'
-   
   end
 
   # Handles the POST request when user submites the Log In form. Similar to above, but without the new user creation.

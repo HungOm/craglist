@@ -9,8 +9,6 @@ class User < ActiveRecord::Base
 
   def password
     @password ||= Password.new(password_hash)
-
-
   end
 
 
